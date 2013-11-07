@@ -10,23 +10,30 @@ function returnFilesInDirectory($addr)
   }
   return $arr;
 }
+
 $block = $_GET["block"];
 ?>
 <!DOCTYPE HTML>
 <html lang="ru-RU">
 <head>
   <meta charset="UTF-8">
-  <title>springboard</title>
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+  <title><? if (!isset($block)) {
+      echo "springboard";
+    } else {
+      echo $block;
+    } ?></title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="css/start.css"/>
   <style type="text/css">
     .spb-block {
       padding: 50px 20px;
     }
+
     .spb-list {
       width: 300px;
       margin: 50px auto 50px;
     }
+
     .spb-tomain {
       position: fixed;
       top: 0;
@@ -37,6 +44,7 @@ $block = $_GET["block"];
       line-height: 20px;
       text-decoration: none;
     }
+
     .spb-tomain:hover {
       background: #dfdfdf;
       cursor: pointer;
@@ -44,7 +52,7 @@ $block = $_GET["block"];
   </style>
 </head>
 <body>
-<? if (isset($block)) {?><a href="/" class="spb-tomain">&larr;</a><?}?>
+<? if (isset($block)) { ?><a href="/" class="spb-tomain">&larr;</a><? } ?>
 <div class="wrapper">
   <div class="container">
     <?
@@ -53,11 +61,9 @@ $block = $_GET["block"];
       ?>
 
       <div class="spb-block">
-      <?
-      include "./html/" . $block . ".html";
-      ?>
+        <? include "./html/" . $block . ".html"; ?>
       </div>
-        <?
+    <?
     } else {
       $files = returnFilesInDirectory("./html/");
       ?>

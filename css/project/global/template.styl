@@ -1,0 +1,28 @@
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font: basefont f-sansserif;
+  color: textColor;
+  background: bgColor;
+  line-height: 1.6;
+  position: relative;
+  word-wrap: break-word;
+
+  select-color: darken(bgColor, 10);
+}
+
+.wrapper {
+  overflow: hidden;
+}
+.container {
+  @extend .p-container;
+}

@@ -1,0 +1,44 @@
+// обычный
+.link {
+  @extend .p-link;
+
+  u {
+    text-decoration: none;
+  }
+
+  &:hover {
+    u {
+      text-decoration: underline;
+    }
+  }
+}
+
+// штрихпунктирчиком
+.dashed {
+  @extend .p-link;
+
+  u {
+    text-decoration: none;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      border-top: 1px dashed;
+    }
+  }
+}
+
+
+// точечками
+.dotted {
+  @extend .dashed;
+
+  u:after {
+    border-style: dotted;
+  }
+}

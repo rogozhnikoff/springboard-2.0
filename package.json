@@ -6,6 +6,13 @@
   "readmeFilename": "README.md",
   "main": "dev.js",
   "devDependencies": {
+
+    "express": "*",
+    "stylus": "*",
+    "autoprefixer-stylus": "*",
+    "csso-stylus": "*",
+    "swig": "*",
+
     "grunt": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-stylus": "*",

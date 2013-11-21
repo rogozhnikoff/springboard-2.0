@@ -7,12 +7,8 @@ frontend workflow
 ## install:
 * install nodejs
 * run: npm install --save-dev
+* run: node springboard
 * profit!
-
-## usage:
-* php for html
-* grunt for css-js build
-* stylus for css easy
 
 ## include:
 * stylus
